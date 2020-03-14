@@ -1,0 +1,31 @@
+package br.edu.cesmac.produtoraapi.resources;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.edu.cesmac.produtoraapi.domain.Filme;
+import br.edu.cesmac.produtoraapi.repository.FilmeRepository;
+
+@RestController
+@RequestMapping("/filmes")
+public class FilmesResources {
+	
+	@Autowired
+	private FilmeRepository filmeRepository;
+	
+	@GetMapping
+	public String listartodas() {
+		return "Teste, teste";
+	}
+	
+	
+	@PostMapping
+	public void gravar(Filme filme) {
+		filmeRepository.save(filme);
+	}
+	
+	
+}

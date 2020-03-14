@@ -1,0 +1,48 @@
+package br.edu.cesmac.produtoraapi.domain;
+
+import java.sql.Date;
+
+import javax.persistence.IdClass;
+
+
+
+
+
+
+@Id
+public class Filme {
+
+
+	private String titulo;
+	private Date data_lancamento;
+	private String sinopse;
+	private String genero;
+	
+	
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public Date getData_lancamento() {
+		return data_lancamento;
+	}
+	public void setData_lancamento(Date data_lancamento) {
+		this.data_lancamento = data_lancamento;
+	}
+	public String getSinopse() {
+		return sinopse;
+	}
+	public void setSinopse(String sinopse) {
+		this.sinopse = sinopse;
+	}
+	public String getGenero() {
+		return genero;
+	}
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+	
+	
+}

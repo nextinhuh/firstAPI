@@ -1,0 +1,13 @@
+package br.edu.cesmac.nolapi.resources;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class FilmesResources {
+	
+	@GetMapping(path = "/teste")
+	public String listartodas() {
+		return "Teste, teste";
+	}
+}

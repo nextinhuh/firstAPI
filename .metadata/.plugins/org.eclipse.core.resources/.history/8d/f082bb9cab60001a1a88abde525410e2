@@ -1,0 +1,20 @@
+package br.edu.cesmac.produtoraapi.repository;
+
+
+import org.springframework.stereotype.Repository;
+
+
+
+@Repository
+public class FilmeRepository {
+
+	@Autowired
+	private FilmeRepository filmeRepository;
+	
+	@GetMapping 
+	public List<Filme> listar() {
+		return filmeRepository.findAll(); 
+		}
+
+	
+}

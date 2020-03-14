@@ -1,0 +1,19 @@
+package br.edu.cesmac.produtoraapi.resources;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.edu.cesmac.produtoraapi.repository.FilmeRepository;
+
+@RestController
+public class FilmesResources {
+	
+	@Autowired
+	private FilmeRepository filmeRepository;
+	
+	@GetMapping(path = "/teste")
+	public String listartodas() {
+		return "Teste, teste";
+	}
+}

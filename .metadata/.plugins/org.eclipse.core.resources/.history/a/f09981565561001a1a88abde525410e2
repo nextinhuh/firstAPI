@@ -1,0 +1,23 @@
+package br.edu.cesmac.produtoraapi.resources;
+
+
+@RestController
+@RequestMapping("/filmes")
+public class FilmesResources {
+	
+	@Autowired
+	private FilmeRepository filmeRepository;
+	
+	@GetMapping
+	public List<Filme> listartodos() {
+		return filmeRepository.findAll();
+	}
+	
+	
+	@PostMapping
+	public void gravar(@RequestBody Filme filme) {
+		filmeRepository.save(filme);
+	}
+	
+	
+}

@@ -1,0 +1,5 @@
+package br.edu.cesmac.produtoraapi.repository;
+
+public class GeneroRepository {
+
+}
